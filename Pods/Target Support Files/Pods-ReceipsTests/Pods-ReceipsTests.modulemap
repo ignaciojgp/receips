@@ -1,0 +1,6 @@
+framework module Pods_ReceipsTests {
+  umbrella header "Pods-ReceipsTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
