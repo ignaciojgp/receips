@@ -20,6 +20,9 @@
 		CAFC609D1F1E82720087934A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAFC609C1F1E82720087934A /* AVFoundation.framework */; };
 		CAFC609F1F1EC87E0087934A /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAFC609E1F1EC87E0087934A /* CoreImage.framework */; };
 		CCE9DE1F2F7BAD8250EF5376 /* Pods_ReceipsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9D6DF4DF063B186AADD4FE3 /* Pods_ReceipsTests.framework */; };
+		FF9ABD0E1F297BF100E14165 /* GoalsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9ABD0D1F297BF100E14165 /* GoalsTableViewController.swift */; };
+		FF9ABD101F297C1000E14165 /* GoalsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9ABD0F1F297C1000E14165 /* GoalsController.swift */; };
+		FF9ABD121F29889E00E14165 /* NewGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9ABD111F29889E00E14165 /* NewGoalViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +71,9 @@
 		D9D6DF4DF063B186AADD4FE3 /* Pods_ReceipsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReceipsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8C3A0846AA65084DEC8C659 /* Pods-ReceipsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReceipsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReceipsUITests/Pods-ReceipsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EE3AC742B800B70ADFA84EF6 /* Pods-ReceipsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReceipsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReceipsTests/Pods-ReceipsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FF9ABD0D1F297BF100E14165 /* GoalsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoalsTableViewController.swift; path = Goals/GoalsTableViewController.swift; sourceTree = "<group>"; };
+		FF9ABD0F1F297C1000E14165 /* GoalsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoalsController.swift; path = Goals/GoalsController.swift; sourceTree = "<group>"; };
+		FF9ABD111F29889E00E14165 /* NewGoalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewGoalViewController.swift; path = Goals/NewGoalViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +144,7 @@
 		CAFC60691F1E79040087934A /* Receips */ = {
 			isa = PBXGroup;
 			children = (
+				FF9ABD0C1F297BBE00E14165 /* Goals */,
 				CAFC606A1F1E79040087934A /* AppDelegate.swift */,
 				CAFC606C1F1E79050087934A /* ViewController.swift */,
 				CAFC606E1F1E79050087934A /* Main.storyboard */,
@@ -180,6 +187,16 @@
 				4EC0CEB1E3914E40749D4A75 /* Pods_ReceipsUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FF9ABD0C1F297BBE00E14165 /* Goals */ = {
+			isa = PBXGroup;
+			children = (
+				FF9ABD0D1F297BF100E14165 /* GoalsTableViewController.swift */,
+				FF9ABD0F1F297C1000E14165 /* GoalsController.swift */,
+				FF9ABD111F29889E00E14165 /* NewGoalViewController.swift */,
+			);
+			name = Goals;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -466,9 +483,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF9ABD121F29889E00E14165 /* NewGoalViewController.swift in Sources */,
 				CAFC606D1F1E79050087934A /* ViewController.swift in Sources */,
 				CAFC60731F1E79050087934A /* Receips.xcdatamodeld in Sources */,
+				FF9ABD0E1F297BF100E14165 /* GoalsTableViewController.swift in Sources */,
 				CAFC606B1F1E79040087934A /* AppDelegate.swift in Sources */,
+				FF9ABD101F297C1000E14165 /* GoalsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -170,11 +170,11 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="59"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EFN-qg-Yw0" id="vRo-X0-ruc">
-                                    <rect key="frame" x="0.0" y="0.0" width="341" height="58.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="58.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ybl-4e-3QZ">
-                                            <rect key="frame" x="16" y="19" width="33.5" height="20.5"/>
+                                            <rect key="frame" x="15" y="19" width="33.5" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -205,10 +205,10 @@
             </objects>
             <point key="canvasLocation" x="2068" y="-374"/>
         </scene>
-        <!--Ahorro-->
+        <!--Goals-->
         <scene sceneID="qnL-k0-dkx">
             <objects>
-                <tableViewController id="h3f-hb-CMI" sceneMemberID="viewController">
+                <tableViewController id="h3f-hb-CMI" customClass="GoalsTableViewController" customModule="Receips" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="79" sectionHeaderHeight="18" sectionFooterHeight="18" id="xDr-cF-2iL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -221,25 +221,25 @@
                                     <rect key="frame" x="0.0" y="0.0" width="342" height="78"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre meta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GIp-8l-CwY">
-                                            <rect key="frame" x="8" y="12" width="181" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre meta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GIp-8l-CwY">
+                                            <rect key="frame" x="8" y="12" width="326" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12/30 pagos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rhk-RU-Suf">
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12/30 pagos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rhk-RU-Suf">
                                             <rect key="frame" x="8" y="41" width="181" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$0,000.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJc-Lo-wbP">
-                                            <rect key="frame" x="254" y="29" width="80" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$0,000.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJc-Lo-wbP">
+                                            <rect key="frame" x="139" y="39" width="195" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.76888950892857144" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.00082978644730744683" green="0.66456849093264247" blue="0.0012873670946565261" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -254,7 +254,7 @@
                             <outlet property="delegate" destination="h3f-hb-CMI" id="otv-Wl-JST"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Ahorro" id="slU-sB-Xjw">
+                    <navigationItem key="navigationItem" title="Goals" id="slU-sB-Xjw">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="E4L-aH-Woq">
                             <connections>
                                 <segue destination="VNE-Hd-Vah" kind="show" id="cKm-Tf-iLd"/>
@@ -264,12 +264,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fhf-Fd-yIf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2068" y="430"/>
+            <point key="canvasLocation" x="2068" y="429.53523238380814"/>
         </scene>
         <!--Nueva meta-->
         <scene sceneID="3yd-ge-1JR">
             <objects>
-                <viewController id="VNE-Hd-Vah" sceneMemberID="viewController">
+                <viewController id="VNE-Hd-Vah" customClass="NewGoalViewController" customModule="Receips" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1Jr-o3-vqS"/>
                         <viewControllerLayoutGuide type="bottom" id="Lcj-2z-rHg"/>
@@ -297,7 +297,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="changeAmmount:" destination="VNE-Hd-Vah" eventType="editingChanged" id="3AN-Wd-v24"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fecha cumplimiento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XCo-7i-UEZ">
                                 <rect key="frame" x="16" y="221" width="154" height="21"/>
@@ -320,6 +323,9 @@
                                     <segment title="Enviar notificación"/>
                                     <segment title="no enviar notificación"/>
                                 </segments>
+                                <connections>
+                                    <action selector="changeNotify:" destination="VNE-Hd-Vah" eventType="valueChanged" id="ohh-mJ-hiJ"/>
+                                </connections>
                             </segmentedControl>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aT9-Ey-BGC">
                                 <rect key="frame" x="16" y="310" width="343" height="241"/>
@@ -347,6 +353,9 @@
                                             <segment title="Quincena"/>
                                             <segment title="Mes"/>
                                         </segments>
+                                        <connections>
+                                            <action selector="changePeriod:" destination="VNE-Hd-Vah" eventType="valueChanged" id="Jl7-XN-GcK"/>
+                                        </connections>
                                     </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cálculador de pagos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XQv-L4-Gm2">
                                         <rect key="frame" x="93" y="15" width="158" height="21"/>
@@ -384,7 +393,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="changeBalance:" destination="VNE-Hd-Vah" eventType="editingChanged" id="2Od-KW-OPm"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z5p-bb-PK5">
                                 <rect key="frame" x="92" y="565" width="191" height="40"/>
@@ -396,6 +408,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Nueva meta" id="FpQ-Ho-L5n"/>
+                    <connections>
+                        <outlet property="ammountTF" destination="lZz-zB-ffT" id="PCT-Ss-fyV"/>
+                        <outlet property="balanceTF" destination="TSc-V6-Swp" id="aX4-zS-ygc"/>
+                        <outlet property="duedateTF" destination="cqA-PZ-f6T" id="uu2-vK-gv8"/>
+                        <outlet property="nameTF" destination="wH7-fr-N1h" id="c7G-B1-xMq"/>
+                        <outlet property="notifySC" destination="g0B-0e-pzN" id="jOE-2W-uYE"/>
+                        <outlet property="numPeriodLabel" destination="zwX-RW-Obp" id="WDF-xJ-RKy"/>
+                        <outlet property="periodAmmountLabel" destination="69v-1Q-MLJ" id="7DB-Kf-If4"/>
+                        <outlet property="periodSC" destination="Grr-Da-Fgf" id="C48-a9-aBu"/>
+                        <outlet property="saveBtn" destination="Z5p-bb-PK5" id="nj2-rZ-1ll"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AFC-jo-OnJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -418,7 +441,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Evm-LL-Nhb">
-                                            <rect key="frame" x="16" y="0.0" width="344" height="75.5"/>
+                                            <rect key="frame" x="15" y="0.0" width="345" height="75.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                             <nil key="textColor"/>
@@ -466,7 +489,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="s1b-ye-cMO">
-                                            <rect key="frame" x="16" y="0.0" width="344" height="73.5"/>
+                                            <rect key="frame" x="15" y="0.0" width="345" height="73.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                             <nil key="textColor"/>

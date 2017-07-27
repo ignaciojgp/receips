@@ -21,16 +21,23 @@ class ReceipsTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+    func testGoals() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+        
+        let controller = GoalsController()
+        
+        let duedate = Date.init(timeIntervalSinceNow: 60*60*24*365)
+        
+        let list = controller.getGoalsList()
+
+        controller.addGoal(balance: 1500, dueDate: duedate, name: "Ejemplo", notify: true, period: 16, targetAmmount: 1000000)
+        
+        let list2 = controller.getGoalsList()
+        
+                
+        XCTAssert(list2.count > list.count)
+        
     }
     
 }
