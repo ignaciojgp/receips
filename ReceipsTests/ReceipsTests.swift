@@ -35,8 +35,21 @@ class ReceipsTests: XCTestCase {
         
         let list2 = controller.getGoalsList()
         
-                
+        
         XCTAssert(list2.count > list.count)
+        
+    }
+    
+    func testGoalCalculator(){
+        
+        let controller = GoalsController()
+
+        let duedate = Date.init(timeIntervalSinceNow: 60*60*24*365)
+        
+        let numPays = controller.getPeriodsForGoal(ammound: 100000, duedate: duedate, paymentsPerMont: 1)
+
+        XCTAssert(numPays > 0)
+
         
     }
     

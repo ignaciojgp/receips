@@ -58,12 +58,37 @@ class GoalsController: NSObject {
         
     }
     
-    func getPeriodsForGoal(ammound:Decimal, duedate:Date, paymentsPerMont:Int )->Int{
-        return 2
+    func getPeriodsForGoal(ammound:Double, duedate:Date, paymentsPerMont:Int )->Int{
+        
+        let now = Date()
+        
+        
+        let calendar = Calendar(identifier: .gregorian)
+        
+        let unit:Int?
+        
+        switch paymentsPerMont {
+        case 4:
+            let components = calendar.dateComponents([.day, .weekOfMonth], from: now, to: duedate)
+            unit = components.weekOfMonth
+            
+            break
+        case 2:
+            let components = calendar.dateComponents([.day, .month], from: now, to: duedate)
+            unit = components.month! * 2
+            
+            break
+        default:
+            let components = calendar.dateComponents([.day, .month], from: now, to: duedate)
+            unit = components.month
+            break
+        }
+        
+        return unit!
     }
     
-    func getPaymentAmmount(total:Decimal, periods:Int)->Decimal{
-        return 100
+    func getPaymentAmmount(total:Double, periods:Int)->Double{
+        return total / Double(periods)
     }
     
     
