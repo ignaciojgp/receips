@@ -31,12 +31,36 @@ class ReceipsTests: XCTestCase {
         
         let list = controller.getGoalsList()
 
-        controller.addGoal(balance: 1500, dueDate: duedate, name: "Ejemplo", notify: true, period: 16, targetAmmount: 1000000)
+        controller.addGoal(balance: 1500, dueDate: duedate, name: "Ejemplo", notify: true, period: 1, targetAmmount: 1000000, numPays: 11)
         
         let list2 = controller.getGoalsList()
         
         
         XCTAssert(list2.count > list.count)
+        
+    }
+    
+    func testAddingGoalOp(){
+        let controller = GoalsController()
+        let list = controller.getGoalsList()
+        if let first = list.first as? MOGoal{
+            
+            
+            let operations = first.operations;
+            let ini = operations!.count
+            
+            print(operations!.count)
+
+            controller.addOperationForGoal(goal: first, ammount: 1000)
+            print(operations!.count)
+            
+            XCTAssert(operations!.count > ini)
+
+        }else{
+        
+            XCTFail()
+        }
+        
         
     }
     
@@ -46,7 +70,7 @@ class ReceipsTests: XCTestCase {
 
         let duedate = Date.init(timeIntervalSinceNow: 60*60*24*365)
         
-        let numPays = controller.getPeriodsForGoal(ammound: 100000, duedate: duedate, paymentsPerMont: 1)
+        let numPays = controller.getPeriodsForGoal(duedate: duedate, paymentsPerMont: 1)
 
         XCTAssert(numPays > 0)
 

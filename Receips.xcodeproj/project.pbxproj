@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4B709E4E574CD98FCBA436BA /* Pods_ReceipsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EC0CEB1E3914E40749D4A75 /* Pods_ReceipsUITests.framework */; };
 		61ED6EE7F2E2DB5EB29768A7 /* Pods_Receips.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 330E4E92799CF79511DA6D51 /* Pods_Receips.framework */; };
+		CA0979581F2F73B8002FC8E7 /* GoalDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0979571F2F73B8002FC8E7 /* GoalDetailTableViewController.swift */; };
 		CAFC606B1F1E79040087934A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFC606A1F1E79040087934A /* AppDelegate.swift */; };
 		CAFC606D1F1E79050087934A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFC606C1F1E79050087934A /* ViewController.swift */; };
 		CAFC60701F1E79050087934A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAFC606E1F1E79050087934A /* Main.storyboard */; };
@@ -49,6 +50,7 @@
 		4EC0CEB1E3914E40749D4A75 /* Pods_ReceipsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReceipsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EB592830C14E700ACDEC595 /* Pods-ReceipsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReceipsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReceipsUITests/Pods-ReceipsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AE562E19C7C71097B56D514E /* Pods-Receips.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Receips.release.xcconfig"; path = "Pods/Target Support Files/Pods-Receips/Pods-Receips.release.xcconfig"; sourceTree = "<group>"; };
+		CA0979571F2F73B8002FC8E7 /* GoalDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoalDetailTableViewController.swift; path = Goals/GoalDetailTableViewController.swift; sourceTree = "<group>"; };
 		CAFC60671F1E79040087934A /* Receips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Receips.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAFC606A1F1E79040087934A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAFC606C1F1E79050087934A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -189,12 +191,29 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		FF9ABD0C1F297BBE00E14165 /* Goals */ = {
+		CAFF468B1F3B774F007EE9C7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FF9ABD0F1F297C1000E14165 /* GoalsController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		CAFF468C1F3B7753007EE9C7 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				FF9ABD0D1F297BF100E14165 /* GoalsTableViewController.swift */,
-				FF9ABD0F1F297C1000E14165 /* GoalsController.swift */,
 				FF9ABD111F29889E00E14165 /* NewGoalViewController.swift */,
+				CA0979571F2F73B8002FC8E7 /* GoalDetailTableViewController.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		FF9ABD0C1F297BBE00E14165 /* Goals */ = {
+			isa = PBXGroup;
+			children = (
+				CAFF468B1F3B774F007EE9C7 /* Controller */,
+				CAFF468C1F3B7753007EE9C7 /* View */,
 			);
 			name = Goals;
 			sourceTree = "<group>";
@@ -483,6 +502,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA0979581F2F73B8002FC8E7 /* GoalDetailTableViewController.swift in Sources */,
 				FF9ABD121F29889E00E14165 /* NewGoalViewController.swift in Sources */,
 				CAFC606D1F1E79050087934A /* ViewController.swift in Sources */,
 				CAFC60731F1E79050087934A /* Receips.xcdatamodeld in Sources */,

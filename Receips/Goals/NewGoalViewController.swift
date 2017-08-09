@@ -86,6 +86,53 @@ class NewGoalViewController: UIViewController {
         
         showDatePicker()
     }
+    @IBAction func save(_ sender: Any) {
+        
+        
+        let numFormater = NumberFormatter()
+        
+        let name = nameTF.text ?? "Sin título"
+        
+        let ammount = numFormater.number(from: (ammountTF.text ?? "0"))?.doubleValue ?? 0
+        let balance = numFormater.number(from: (balanceTF.text ?? "0"))?.doubleValue ?? 0
+        
+        let formater = DateFormatter()
+        let notify = notifySC.selectedSegmentIndex == 0 ? true:false
+        
+        formater.dateFormat = NewGoalViewController.dateformat
+        
+        let date = formater.date(from: duedatetf.text!)
+        
+        
+        var paymentspermonth :Int
+        
+        switch periodSC.selectedSegmentIndex {
+        case 0:
+            paymentspermonth = 4
+            break
+        case 1:
+            paymentspermonth = 2
+            break
+        default:
+            paymentspermonth = 1
+            break
+        }
+        
+        if date != nil{
+            
+            if let numperiods = controller?.getPeriodsForGoal(duedate: date!, paymentsPerMont: paymentspermonth){
+                
+                let nump = numperiods > 0 ? numperiods:1
+                
+                controller?.addGoal(balance: balance, dueDate: date!, name: name, notify: notify, period: Int16(paymentspermonth), targetAmmount: ammount, numPays: nump)
+
+            }
+            
+        }
+
+        self.navigationController?.popToRootViewController(animated: true)
+        
+    }
     
     func showDatePicker(){
         
@@ -149,7 +196,7 @@ class NewGoalViewController: UIViewController {
         
         if date != nil{
             
-            if let numperiods = controller?.getPeriodsForGoal(ammound: ammount, duedate: date!, paymentsPerMont: paymentspermonth){
+            if let numperiods = controller?.getPeriodsForGoal(duedate: date!, paymentsPerMont: paymentspermonth){
             
                 let nump = numperiods > 0 ? numperiods:1
                 
@@ -174,14 +221,6 @@ class NewGoalViewController: UIViewController {
     }
     
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }

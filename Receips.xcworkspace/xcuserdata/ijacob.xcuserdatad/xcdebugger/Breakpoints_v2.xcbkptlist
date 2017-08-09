@@ -9,29 +9,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Receips/ViewController.swift"
-            timestampString = "522795752.515244"
+            filePath = "Receips/Goals/GoalDetailTableViewController.swift"
+            timestampString = "523992128.950115"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "156"
-            endingLineNumber = "156"
-            landmarkName = "captureOutput(_:didOutputMetadataObjects:from:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Receips/ViewController.swift"
-            timestampString = "522795752.515244"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "171"
-            endingLineNumber = "171"
-            landmarkName = "captureOutput(_:didOutputMetadataObjects:from:)"
+            startingLineNumber = "221"
+            endingLineNumber = "221"
+            landmarkName = "addPayment(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -41,45 +25,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ReceipsTests/ReceipsTests.swift"
-            timestampString = "522858176.759196"
+            filePath = "Receips/Goals/GoalsController.swift"
+            timestampString = "523993678.139014"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "testGoalCalculator()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ReceipsTests/ReceipsTests.swift"
-            timestampString = "522858177.192438"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "testGoalCalculator()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Receips/Goals/NewGoalViewController.swift"
-            timestampString = "522966660.299913"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
-            landmarkName = "showDatePicker()"
+            startingLineNumber = "178"
+            endingLineNumber = "178"
+            landmarkName = "getPaymentName(type:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -90,107 +42,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Receips/Goals/NewGoalViewController.swift"
-            timestampString = "522966660.299913"
+            timestampString = "523993677.774104"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
-            landmarkName = "calculate()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Receips.NewGoalViewController.calculate () -&gt; ()"
-                  moduleName = "Receips"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ijacob/Documents/Personal/Receips/Receips/Goals/NewGoalViewController.swift"
-                  timestampString = "522965074.808055"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "121"
-                  endingLineNumber = "121"
-                  offsetFromSymbolStart = "50">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Receips.NewGoalViewController.(calculate () -&gt; ()).(implicit closure #1)"
-                  moduleName = "Receips"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ijacob/Documents/Personal/Receips/Receips/Goals/NewGoalViewController.swift"
-                  timestampString = "522965074.811663"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "121"
-                  endingLineNumber = "121"
-                  offsetFromSymbolStart = "12">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Receips.NewGoalViewController.(calculate () -&gt; ()).(implicit closure #2)"
-                  moduleName = "Receips"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ijacob/Documents/Personal/Receips/Receips/Goals/NewGoalViewController.swift"
-                  timestampString = "522965074.813953"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "121"
-                  endingLineNumber = "121"
-                  offsetFromSymbolStart = "11">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Receips/Goals/NewGoalViewController.swift"
-            timestampString = "522966835.033817"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "167"
-            endingLineNumber = "167"
-            landmarkName = "calculate()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Receips/Goals/GoalsTableViewController.swift"
-            timestampString = "522965234.894465"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
-            landmarkName = "prepare(for:sender:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Receips/Goals/GoalsTableViewController.swift"
-            timestampString = "522965241.742848"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
-            landmarkName = "prepare(for:sender:)"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
+            landmarkName = "save(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
