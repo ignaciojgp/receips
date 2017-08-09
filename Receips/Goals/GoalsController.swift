@@ -21,8 +21,11 @@ class GoalsController: NSObject {
         let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
         let context:NSManagedObjectContext = appDelegate.persistentContainer.viewContext
         
+        
+        
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: GoalsController.Goal)
         
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
         
         do {
             list = try context.fetch(fetchRequest as! NSFetchRequest<NSFetchRequestResult>)
@@ -145,7 +148,26 @@ class GoalsController: NSObject {
 
     }
     
-    
+    func removeOperationForGoal(goal:MOGoal, operation:MOGoalOperation){
+        
+        
+        var set = goal.operations!.set
+        
+        set.remove(operation)
+        
+        goal.operations = NSOrderedSet(set: set)
+        
+        goal.setValue(goal.balance - operation.ammount, forKey: "balance")
+
+        
+        let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context:NSManagedObjectContext = appDelegate.persistentContainer.viewContext
+        
+        
+        
+        context.delete(operation)
+        
+    }
 
     
     func getRestingNumPayments(item:MOGoal)->Int{
@@ -184,5 +206,7 @@ class GoalsController: NSObject {
             return "Semanas"
         }
     }
+    
+   
     
 }

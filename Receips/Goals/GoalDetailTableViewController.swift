@@ -36,6 +36,8 @@ class GoalDetailTableViewController: UITableViewController {
         dateformater.dateFormat = "dd MMM yyyy"
         
         title = item?.name
+        
+        
 
     }
 
@@ -218,6 +220,10 @@ class GoalDetailTableViewController: UITableViewController {
                 if let val = Double(text){
                 
                     self.controller?.addOperationForGoal(goal:self.item!,  ammount: val);
+                    
+                    self.tableView.beginUpdates()
+                    self.tableView.insertRows(at: [IndexPath(row: self.item!.operations!.count - 1, section: 1)], with: .automatic)
+                    self.tableView.endUpdates()
                     self.tableView.reloadData()
                     
                 }
@@ -231,5 +237,29 @@ class GoalDetailTableViewController: UITableViewController {
         self.present(alertview, animated: true, completion: nil)
         
         
+    }
+    
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        
+        return indexPath.section == 1 ? true:false;
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.delete) {
+            if let ops = item?.operations{
+                if let op = ops[indexPath.row] as? MOGoalOperation {
+                    
+                    controller?.removeOperationForGoal(goal:item!, operation:op)
+
+                    
+                    self.tableView.beginUpdates()
+                    self.tableView.deleteRows(at: [indexPath], with: .fade)
+                    self.tableView.endUpdates()
+                    
+                    self.tableView.reloadData()
+
+                }
+            }
+        }
     }
 }

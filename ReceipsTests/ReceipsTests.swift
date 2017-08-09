@@ -64,6 +64,40 @@ class ReceipsTests: XCTestCase {
         
     }
     
+    func testRemovingGoalOp(){
+        let controller = GoalsController()
+        let list = controller.getGoalsList()
+        if let first = list.first as? MOGoal{
+            
+            
+            let operations = first.operations;
+            let ini = operations!.count
+            
+            print(operations!.count)
+            
+            controller.addOperationForGoal(goal: first, ammount: 1000)
+            
+            
+            
+            print(first.operations!.count)
+            
+            let lastop = operations?.lastObject
+            
+            
+            controller.removeOperationForGoal(goal: first, operation: lastop as! MOGoalOperation)
+            
+            print(first.operations!.count)
+            
+            XCTAssert(first.operations!.count == ini)
+            
+        }else{
+            
+            XCTFail()
+        }
+        
+        
+    }
+    
     func testGoalCalculator(){
         
         let controller = GoalsController()
