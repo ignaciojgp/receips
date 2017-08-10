@@ -28,6 +28,9 @@ class GoalDetailTableViewController: UITableViewController {
     var moneyformater:NumberFormatter = NumberFormatter()
     var numPayments:Int = 0
 
+    
+//    MARK: -
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,9 +44,61 @@ class GoalDetailTableViewController: UITableViewController {
 
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    
+    
+    //MARK: - IBActions
+    
+    @IBAction func addPayment(_ sender: Any) {
+        
+        let alertview = UIAlertController(title: "Abonar", message: "Cuanto desea abonar ", preferredStyle: .alert)
+        
+        alertview.addTextField { (fiel) in
+            fiel.placeholder = "cantidad"
+            fiel.keyboardType = .decimalPad
+            
+            
+            let payment = self.controller?.getPaymentAmmountFor(goal: self.item!)
+            
+            fiel.text = payment?.description
+            
+        }
+        
+        
+        
+        alertview.addAction(UIAlertAction(title: "Cancelar", style: .destructive, handler: { (UIAlertAction) in
+            alertview.dismiss(animated: true, completion: nil)
+        }))
+        
+        alertview.addAction(UIAlertAction(title: "OK", style: .default, handler: { (UIAlertAction) in
+            alertview.dismiss(animated: true, completion: nil)
+            
+            let textf:UITextField = alertview.textFields![0]
+            
+            
+            if let text = textf.text{
+                
+                if let val = Double(text){
+                    
+                    self.controller?.addOperationForGoal(goal:self.item!,  ammount: val);
+                    
+                    self.tableView.beginUpdates()
+                    self.tableView.insertRows(at: [IndexPath(row: self.item!.operations!.count - 1, section: 1)], with: .automatic)
+                    self.tableView.endUpdates()
+                    self.tableView.reloadData()
+                    
+                }
+            }
+            
+            
+        }))
+        
+        
+        
+        self.present(alertview, animated: true, completion: nil)
+        
+        
     }
+
 
     // MARK: - Table view data source
 
@@ -188,56 +243,6 @@ class GoalDetailTableViewController: UITableViewController {
     
    
 
-    @IBAction func addPayment(_ sender: Any) {
-        
-        let alertview = UIAlertController(title: "Abonar", message: "Cuanto desea abonar ", preferredStyle: .alert)
-        
-        alertview.addTextField { (fiel) in
-            fiel.placeholder = "cantidad"
-            fiel.keyboardType = .decimalPad
-            
-            
-            let payment = self.controller?.getPaymentAmmountFor(goal: self.item!)
-            
-            fiel.text = payment?.description
-            
-        }
-        
-        
-        
-        alertview.addAction(UIAlertAction(title: "Cancelar", style: .destructive, handler: { (UIAlertAction) in
-            alertview.dismiss(animated: true, completion: nil)
-        }))
-        
-        alertview.addAction(UIAlertAction(title: "OK", style: .default, handler: { (UIAlertAction) in
-            alertview.dismiss(animated: true, completion: nil)
-            
-            let textf:UITextField = alertview.textFields![0]
-            
-            
-            if let text = textf.text{
-            
-                if let val = Double(text){
-                
-                    self.controller?.addOperationForGoal(goal:self.item!,  ammount: val);
-                    
-                    self.tableView.beginUpdates()
-                    self.tableView.insertRows(at: [IndexPath(row: self.item!.operations!.count - 1, section: 1)], with: .automatic)
-                    self.tableView.endUpdates()
-                    self.tableView.reloadData()
-                    
-                }
-            }
-
-            
-        }))
-        
-        
-        
-        self.present(alertview, animated: true, completion: nil)
-        
-        
-    }
     
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         
@@ -262,4 +267,6 @@ class GoalDetailTableViewController: UITableViewController {
             }
         }
     }
+    
+
 }

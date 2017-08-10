@@ -111,4 +111,50 @@ class ReceipsTests: XCTestCase {
         
     }
     
+    func testAddReceip(){
+        
+        let controller = ReceipController()
+        
+        let initial = controller.getReceipsList().count
+        
+        print(initial)
+        
+        controller.addRepecip(concept: "test", ammount: 20.0, date: Date(), photo: nil, kind: 1, isIncome: false)
+        
+        print(controller.getReceipsList().count)
+        
+        XCTAssert(controller.getReceipsList().count > initial)
+        
+    }
+    
+    func testRemoveReceip(){
+        
+        
+        let controller = ReceipController()
+        
+        let initial = controller.getReceipsList().count
+        
+        print(initial)
+        
+        controller.addRepecip(concept: "test", ammount: 20.0, date: Date(), photo: nil, kind: 1, isIncome: false)
+        
+        
+        XCTAssert(controller.getReceipsList().count > initial)
+
+        if let last = controller.getReceipsList().last as? MOReceip {
+            
+            controller.deleteReceip(receip: last)
+            
+            XCTAssert(controller.getReceipsList().count == initial)
+            
+        }else{
+            
+            XCTFail()
+        
+        }
+        
+        
+        
+    }
+    
 }

@@ -207,6 +207,15 @@ class GoalsController: NSObject {
         }
     }
     
+    
+    func deleteGoal(goal:MOGoal){
+    
+        let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context:NSManagedObjectContext = appDelegate.persistentContainer.viewContext
+        
+        context.delete(goal)
+
+    }
    
     
 }

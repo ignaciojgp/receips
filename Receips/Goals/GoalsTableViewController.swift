@@ -12,6 +12,7 @@ class GoalsTableViewController: UITableViewController {
 
     let controller:GoalsController = GoalsController()
     
+    //MARK:-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -59,6 +60,29 @@ class GoalsTableViewController: UITableViewController {
 
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        
+        return true
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.delete) {
+            if let goal:MOGoal = controller.getGoalsList()[indexPath.row] as? MOGoal{
+                
+                controller.deleteGoal(goal: goal)
+                self.tableView.beginUpdates()
+                self.tableView.deleteRows(at: [indexPath], with: .fade)
+                self.tableView.endUpdates()
+
+                
+            }
+        }
+    }
+    
+
+    
+    //MARK:- NAVIGATION
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

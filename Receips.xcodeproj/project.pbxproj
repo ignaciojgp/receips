@@ -10,8 +10,12 @@
 		4B709E4E574CD98FCBA436BA /* Pods_ReceipsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EC0CEB1E3914E40749D4A75 /* Pods_ReceipsUITests.framework */; };
 		61ED6EE7F2E2DB5EB29768A7 /* Pods_Receips.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 330E4E92799CF79511DA6D51 /* Pods_Receips.framework */; };
 		CA0979581F2F73B8002FC8E7 /* GoalDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0979571F2F73B8002FC8E7 /* GoalDetailTableViewController.swift */; };
+		CA9F94511F3C9DC500CAF52E /* ReceipController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9F94501F3C9DC500CAF52E /* ReceipController.swift */; };
+		CA9F94531F3C9DF400CAF52E /* NewReceipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9F94521F3C9DF400CAF52E /* NewReceipViewController.swift */; };
+		CAACE41B1F3D0460006F407D /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAACE41A1F3D0460006F407D /* String.swift */; };
+		CAACE41D1F3D072C006F407D /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAFC60A41F1ECA860087934A /* TesseractOCR.framework */; };
+		CAACE4241F3D12CC006F407D /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = CAACE4231F3D12CC006F407D /* tessdata */; };
 		CAFC606B1F1E79040087934A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFC606A1F1E79040087934A /* AppDelegate.swift */; };
-		CAFC606D1F1E79050087934A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFC606C1F1E79050087934A /* ViewController.swift */; };
 		CAFC60701F1E79050087934A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAFC606E1F1E79050087934A /* Main.storyboard */; };
 		CAFC60731F1E79050087934A /* Receips.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CAFC60711F1E79050087934A /* Receips.xcdatamodeld */; };
 		CAFC60751F1E79050087934A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAFC60741F1E79050087934A /* Assets.xcassets */; };
@@ -51,9 +55,12 @@
 		7EB592830C14E700ACDEC595 /* Pods-ReceipsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReceipsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReceipsUITests/Pods-ReceipsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AE562E19C7C71097B56D514E /* Pods-Receips.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Receips.release.xcconfig"; path = "Pods/Target Support Files/Pods-Receips/Pods-Receips.release.xcconfig"; sourceTree = "<group>"; };
 		CA0979571F2F73B8002FC8E7 /* GoalDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoalDetailTableViewController.swift; path = Goals/GoalDetailTableViewController.swift; sourceTree = "<group>"; };
+		CA9F94501F3C9DC500CAF52E /* ReceipController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReceipController.swift; path = Receips/ReceipController.swift; sourceTree = "<group>"; };
+		CA9F94521F3C9DF400CAF52E /* NewReceipViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewReceipViewController.swift; path = Receips/NewReceipViewController.swift; sourceTree = "<group>"; };
+		CAACE41A1F3D0460006F407D /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = String.swift; path = Utils/String.swift; sourceTree = "<group>"; };
+		CAACE4231F3D12CC006F407D /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
 		CAFC60671F1E79040087934A /* Receips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Receips.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAFC606A1F1E79040087934A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CAFC606C1F1E79050087934A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CAFC606F1F1E79050087934A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CAFC60721F1E79050087934A /* Receips.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Receips.xcdatamodel; sourceTree = "<group>"; };
 		CAFC60741F1E79050087934A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -83,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAACE41D1F3D072C006F407D /* TesseractOCR.framework in Frameworks */,
 				CAFC609F1F1EC87E0087934A /* CoreImage.framework in Frameworks */,
 				CAFC609D1F1E82720087934A /* AVFoundation.framework in Frameworks */,
 				61ED6EE7F2E2DB5EB29768A7 /* Pods_Receips.framework in Frameworks */,
@@ -121,6 +129,39 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		CA9F944D1F3C9D7000CAF52E /* Receips */ = {
+			isa = PBXGroup;
+			children = (
+				CA9F944F1F3C9D9E00CAF52E /* Controller */,
+				CA9F944E1F3C9D8800CAF52E /* View */,
+			);
+			name = Receips;
+			sourceTree = "<group>";
+		};
+		CA9F944E1F3C9D8800CAF52E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CA9F94521F3C9DF400CAF52E /* NewReceipViewController.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		CA9F944F1F3C9D9E00CAF52E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CA9F94501F3C9DC500CAF52E /* ReceipController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		CAACE4191F3D043E006F407D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CAACE41A1F3D0460006F407D /* String.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		CAFC605E1F1E79040087934A = {
 			isa = PBXGroup;
 			children = (
@@ -146,9 +187,11 @@
 		CAFC60691F1E79040087934A /* Receips */ = {
 			isa = PBXGroup;
 			children = (
+				CAACE4231F3D12CC006F407D /* tessdata */,
+				CAACE4191F3D043E006F407D /* Utils */,
+				CA9F944D1F3C9D7000CAF52E /* Receips */,
 				FF9ABD0C1F297BBE00E14165 /* Goals */,
 				CAFC606A1F1E79040087934A /* AppDelegate.swift */,
-				CAFC606C1F1E79050087934A /* ViewController.swift */,
 				CAFC606E1F1E79050087934A /* Main.storyboard */,
 				CAFC60741F1E79050087934A /* Assets.xcassets */,
 				CAFC60761F1E79050087934A /* LaunchScreen.storyboard */,
@@ -338,6 +381,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAFC60781F1E79050087934A /* LaunchScreen.storyboard in Resources */,
+				CAACE4241F3D12CC006F407D /* tessdata in Resources */,
 				CAFC60751F1E79050087934A /* Assets.xcassets in Resources */,
 				CAFC60701F1E79050087934A /* Main.storyboard in Resources */,
 			);
@@ -502,11 +546,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA9F94531F3C9DF400CAF52E /* NewReceipViewController.swift in Sources */,
 				CA0979581F2F73B8002FC8E7 /* GoalDetailTableViewController.swift in Sources */,
 				FF9ABD121F29889E00E14165 /* NewGoalViewController.swift in Sources */,
-				CAFC606D1F1E79050087934A /* ViewController.swift in Sources */,
+				CAACE41B1F3D0460006F407D /* String.swift in Sources */,
 				CAFC60731F1E79050087934A /* Receips.xcdatamodeld in Sources */,
 				FF9ABD0E1F297BF100E14165 /* GoalsTableViewController.swift in Sources */,
+				CA9F94511F3C9DC500CAF52E /* ReceipController.swift in Sources */,
 				CAFC606B1F1E79040087934A /* AppDelegate.swift in Sources */,
 				FF9ABD101F297C1000E14165 /* GoalsController.swift in Sources */,
 			);
@@ -588,6 +634,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -604,7 +651,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -638,6 +685,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -648,7 +696,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -662,7 +710,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 68FH6PBT2K;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Receips/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ignaciojgp.Receips;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -676,7 +726,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 68FH6PBT2K;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Receips/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ignaciojgp.Receips;
 				PRODUCT_NAME = "$(TARGET_NAME)";
