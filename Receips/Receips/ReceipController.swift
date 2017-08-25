@@ -14,6 +14,7 @@ class ReceipController: NSObject {
     static let Receip = "Receip"
     
     func addRepecip(concept:String, ammount:Double, date:Date, photo:Data?, kind:Int, isIncome:Bool){
+        
         let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
         let context:NSManagedObjectContext = appDelegate.persistentContainer.viewContext
         
@@ -50,7 +51,7 @@ class ReceipController: NSObject {
         
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: ReceipController.Receip)
         
-        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "date", ascending: true)]
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "date", ascending: false)]
         
         do {
             list = try context.fetch(fetchRequest as! NSFetchRequest<NSFetchRequestResult>)
@@ -68,5 +69,17 @@ class ReceipController: NSObject {
         let context:NSManagedObjectContext = appDelegate.persistentContainer.viewContext
         
         context.delete(receip)
+    }
+    
+    func imageNameForType(type:Int)->String?{
+        
+        if let bundle = Bundle.main.object(forInfoDictionaryKey: "imageForType") as? Array<String>{
+            if bundle.count > type{
+                return bundle[type]
+            }
+        }
+        
+        return nil
+        
     }
 }

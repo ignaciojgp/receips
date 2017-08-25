@@ -157,4 +157,13 @@ class ReceipsTests: XCTestCase {
         
     }
     
+    func testImageForType(){
+    
+        let controller = ReceipController()
+        
+        controller.imageNameForType(type: 0)
+        
+        
+    }
+    
 }

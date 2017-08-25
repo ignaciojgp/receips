@@ -15,6 +15,7 @@
 		CAACE41B1F3D0460006F407D /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAACE41A1F3D0460006F407D /* String.swift */; };
 		CAACE41D1F3D072C006F407D /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAFC60A41F1ECA860087934A /* TesseractOCR.framework */; };
 		CAACE4241F3D12CC006F407D /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = CAACE4231F3D12CC006F407D /* tessdata */; };
+		CAB3DB4C1F424B3600D4A091 /* ReceipsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB3DB4B1F424B3600D4A091 /* ReceipsTableViewController.swift */; };
 		CAFC606B1F1E79040087934A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFC606A1F1E79040087934A /* AppDelegate.swift */; };
 		CAFC60701F1E79050087934A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAFC606E1F1E79050087934A /* Main.storyboard */; };
 		CAFC60731F1E79050087934A /* Receips.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CAFC60711F1E79050087934A /* Receips.xcdatamodeld */; };
@@ -59,6 +60,7 @@
 		CA9F94521F3C9DF400CAF52E /* NewReceipViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewReceipViewController.swift; path = Receips/NewReceipViewController.swift; sourceTree = "<group>"; };
 		CAACE41A1F3D0460006F407D /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = String.swift; path = Utils/String.swift; sourceTree = "<group>"; };
 		CAACE4231F3D12CC006F407D /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
+		CAB3DB4B1F424B3600D4A091 /* ReceipsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReceipsTableViewController.swift; path = Receips/ReceipsTableViewController.swift; sourceTree = "<group>"; };
 		CAFC60671F1E79040087934A /* Receips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Receips.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAFC606A1F1E79040087934A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAFC606F1F1E79050087934A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				CA9F94521F3C9DF400CAF52E /* NewReceipViewController.swift */,
+				CAB3DB4B1F424B3600D4A091 /* ReceipsTableViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -546,6 +549,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAB3DB4C1F424B3600D4A091 /* ReceipsTableViewController.swift in Sources */,
 				CA9F94531F3C9DF400CAF52E /* NewReceipViewController.swift in Sources */,
 				CA0979581F2F73B8002FC8E7 /* GoalDetailTableViewController.swift in Sources */,
 				FF9ABD121F29889E00E14165 /* NewGoalViewController.swift in Sources */,
@@ -651,7 +655,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -696,7 +700,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

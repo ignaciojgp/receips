@@ -43,6 +43,10 @@ class NewReceipViewController: UIViewController, UITextFieldDelegate , AVCapture
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardDidShow(_:)), name: .UIKeyboardDidShow , object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardDidHide(_:)), name: .UIKeyboardDidHide , object: nil)
+       
+
         
         qrcodeframe.layer.borderColor = UIColor.green.cgColor
         qrcodeframe.layer.borderWidth = 2
@@ -64,6 +68,7 @@ class NewReceipViewController: UIViewController, UITextFieldDelegate , AVCapture
         
         ammountTF.inputAccessoryView = doneToolbar
         
+        feedbackLabel.text = ""
         scanning.progress = 0
         
         initCamera()
@@ -244,6 +249,16 @@ class NewReceipViewController: UIViewController, UITextFieldDelegate , AVCapture
         addButton.isEnabled = valid
     
     }
+    
+    
+    func clearFileds(){
+        conceptTF.text = ""
+        ammountTF.text = ""
+        picker.date = Date()
+        doneDateEditing()
+        checkFields()
+        
+    }
     //MARK: - IBActions
     
     @IBAction func tapCapture(_ sender: Any) {
@@ -252,6 +267,7 @@ class NewReceipViewController: UIViewController, UITextFieldDelegate , AVCapture
     
     @IBAction func tapAdd(_ sender: Any) {
         addReceip()
+        clearFileds()
     }
     
     @IBAction func tapClear(_ sender: Any) {
@@ -274,26 +290,18 @@ class NewReceipViewController: UIViewController, UITextFieldDelegate , AVCapture
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         
-        UIView.animate(withDuration: 0.4) {
-            var frame = self.view.frame
-            
-            
-            frame.origin.y -= 250
-            
-            self.view.frame = frame
-        }
         
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        UIView.animate(withDuration: 0.4) {
-            var frame = self.view.frame
-            
-            
-            frame.origin.y += 250
-            
-            self.view.frame = frame
-        }
+//        UIView.animate(withDuration: 0.4) {
+//            var frame = self.view.frame
+//            
+//            
+//            frame.origin.y += 250
+//            
+//            self.view.frame = frame
+//        }
         
         checkFields()
     }
@@ -348,34 +356,36 @@ class NewReceipViewController: UIViewController, UITextFieldDelegate , AVCapture
         print(tesseract.progress)
         scanning.progress = Float(tesseract.progress)
     }
+    
+    func keyboardDidShow(_ notification: NSNotification) {
+        
+        let keyboardSize:CGSize = (notification.userInfo![UIKeyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue.size
+        
+        print("Keyboard size: \(keyboardSize)")
+        
+        let height = min(keyboardSize.height, keyboardSize.width)
+
+        UIView.animate(withDuration: 0.4) {
+
+            var frame = self.view.frame
+
+            frame.origin.y = -height
+
+            self.view.frame = frame
+            
+        }
+
+    }
+    
+    func keyboardDidHide(_ notification: NSNotification) {
+        print("Keyboard will hide!")
+        UIView.animate(withDuration: 0.4) {
+            var frame = self.view.frame
+            
+            
+            frame.origin.y = 0
+            
+            self.view.frame = frame
+        }
+    }
 }
-//
-//extension String {
-//    
-//    // formatting text for currency textField
-//    func currencyInputFormatting() -> String {
-//        
-//        var number: NSNumber!
-//        let formatter = NumberFormatter()
-//        formatter.numberStyle = .currencyAccounting
-//        formatter.currencySymbol = "$"
-//        formatter.maximumFractionDigits = 2
-//        formatter.minimumFractionDigits = 2
-//        
-//        var amountWithPrefix = self
-//        
-//        // remove from String: "$", ".", ","
-//        let regex = try! NSRegularExpression(pattern: "[^0-9]", options: .caseInsensitive)
-//        amountWithPrefix = regex.stringByReplacingMatches(in: amountWithPrefix, options: NSRegularExpression.MatchingOptions(rawValue: 0), range: NSMakeRange(0, self.characters.count), withTemplate: "")
-//        
-//        let double = (amountWithPrefix as NSString).doubleValue
-//        number = NSNumber(value: (double / 100))
-//        
-//        // if first number is 0 or all numbers were deleted
-//        guard number != 0 as NSNumber else {
-//            return ""
-//        }
-//        
-//        return formatter.string(from: number)!
-//    }
-//}

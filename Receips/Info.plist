@@ -2,6 +2,17 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>imageForType</key>
+	<array>
+		<string>icons8-dog_house</string>
+		<string>icons8-car</string>
+		<string>icons8-graduation_cap</string>
+		<string>icons8-cat</string>
+		<string>icons8-hanger</string>
+		<string>icons8-vegetarian_food</string>
+		<string>icons8-new_job</string>
+		<string>icons8-kitesurfing</string>
+	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
